@@ -17,6 +17,7 @@
     "@angular/core": "^6.0.0",
     "@angular/forms": "^6.0.0",
     "@angular/http": "^6.0.0",
+    "@angular/material": "^6.0.2",
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
@@ -24,12 +25,13 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.0-11",
     "@fortawesome/free-brands-svg-icons": "^5.1.0-8",
     "@fortawesome/free-solid-svg-icons": "^5.1.0-8",
-    "angularfire2": "^5.0.0-rc.8.1-next",
+    "angularfire2": "^5.0.0-rc.9",
     "core-js": "^2.5.4",
-    "firebase": "^5.0.2",
+    "firebase": "^5.0.3",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.1.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@angular/cdk": "^6.0.0"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.0",

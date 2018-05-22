@@ -1,4 +1,6 @@
-# Episode 10X
+# Episode 107 - Reactive Forms Basics Guide
+
+Watch the [screencast](https://angularfirebase.com/lessons/)
 
 
 1. `git clone <this-repo>` 

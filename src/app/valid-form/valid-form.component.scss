@@ -1,0 +1,20 @@
+mat-form-field {
+    display: block;
+}
+
+.mat-accent {
+    background-color: #42A948 !important;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+    border-bottom: 5px solid #42A948;
+}
+
+ul {
+    text-align: left;
+}
+
+.ng-valid .mat-form-field-underline {
+    background-color: green;
+}

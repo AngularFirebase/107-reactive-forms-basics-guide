@@ -1,0 +1,76 @@
+<form [formGroup]="myForm">
+
+    Value: {{ myForm.value | json }}
+    <ul>
+        <li>Valid:
+            <mat-chip selected="true" [color]="myForm.valid ? 'accent' : 'warn'">{{ myForm.valid }}</mat-chip>
+        </li>
+        <li>Invalid:
+            <mat-chip selected="true" [color]="myForm.invalid ? 'accent' : 'warn'">{{ myForm.invalid }}</mat-chip>
+        </li>
+        <li>Dirty:
+            <mat-chip selected="true" [color]="myForm.dirty ? 'accent' : 'warn'">{{ myForm.dirty }}</mat-chip>
+        </li>
+        <li>Pristine:
+            <mat-chip selected="true" [color]="myForm.pristine ? 'accent' : 'warn'">{{ myForm.pristine }}</mat-chip>
+        </li>
+        <li>Touched:
+            <mat-chip selected="true" [color]="myForm.touched ? 'accent' : 'warn'">{{ myForm.touched }}</mat-chip>
+        </li>
+        <li>Untouched:
+            <mat-chip selected="true" [color]="myForm.untouched ? 'accent' : 'warn'">{{ myForm.untouched }}</mat-chip>
+        </li>
+        <li>Pending:
+            <mat-chip selected="true" [color]="myForm.pending ? 'accent' : 'warn'">{{ myForm.pending }}</mat-chip>
+        </li>
+    </ul>
+
+    <hr>
+
+    <mat-form-field>
+        <input matInput placeholder="email" formControlName="email" autocomplete="off">
+
+        <mat-error *ngIf="email.invalid && email.touched" class="has-text-danger">
+            Your email does not look right
+        </mat-error>
+    </mat-form-field>
+
+
+
+    <mat-form-field>
+        <input matInput type="password" placeholder="password" formControlName="password" autocomplete="new-password">
+
+        <mat-hint align="end">Must have one letter, and one number</mat-hint>
+        <mat-error *ngIf="password.invalid && password.touched" class="has-text-danger">
+            That password sucks...
+        </mat-error>
+
+    </mat-form-field>
+
+
+
+    <mat-form-field>
+        <input matInput placeholder="age" [value]="0" formControlName="age">
+
+        <mat-error *ngIf="age.errors?.min && age.touched">
+            {{ age.errors.min.actual }} is young to use this app kiddo!
+        </mat-error>
+
+        <mat-error *ngIf="age.errors?.max && age.touched">
+            {{ age.errors.max.actual }} is too you old to use this app gramps!
+        </mat-error>
+
+    </mat-form-field>
+
+
+
+    <mat-checkbox formControlName="agree" color="primary">Are you sure?</mat-checkbox>
+
+    <hr>
+
+    <button mat-raised-button [disabled]="myForm.invalid || loading" color="primary">Let's Do it!</button>
+
+
+
+
+</form>
