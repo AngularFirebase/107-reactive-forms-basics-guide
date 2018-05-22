@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validator } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'nested-form',
@@ -22,7 +22,8 @@ export class NestedFormComponent implements OnInit {
 
     this.myForm = this.fb.group({
       email: '',
-      phone
+      homePhone: phone,
+      cellPhone: phone,
     })
 
   }

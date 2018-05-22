@@ -41,13 +41,10 @@ export class SubmitFormComponent implements OnInit {
     }
 
     this.loading = false;
-
-    console.log('yay')
-
   }
 
   preloadData() {
-    this.afs.doc('contacts/JSW9UUdBGMwozBGAtl2w').valueChanges().pipe(
+    this.afs.doc('contacts/Kjn0JWBKdOnUlBwuE93S').valueChanges().pipe(
       tap(data => {
         this.myForm.patchValue(data)
       })
